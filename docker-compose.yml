@@ -14,7 +14,7 @@ services:
       POSTGRES_DATABASE: stoctor_dev
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: postgres
-    entrypoint: mix phoenix.server
+    command: mix do phoenix.digest, phoenix.server
   db:
     image: postgres:9.6
     environment:
